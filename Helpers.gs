@@ -375,6 +375,13 @@ function createEvent(event, calendarTz){
           'overrides' : overrides
         };
       }
+    }else{
+      var overrides = [];
+      overrides.push({'method' : 'popup', 'minutes' : 5});
+      newEvent.reminders = {
+        'useDefault' : false,
+        'overrides' : overrides
+      };      
     }
   }
   
